@@ -19,7 +19,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
 
         // Fake API call
         try {
-            const response = await fetch('/api/join', {
+            await fetch('/api/join', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,9 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
     return (
         <div
             className="fixed inset-0 flex items-center justify-center p-4 z-50"
-            onClick={onClose}
+            onClick={(e) => {
+                if (e.target === e.currentTarget) onClose();
+            }}
         >
             <GlassCard
                 cornerRadius={16}
@@ -59,7 +61,6 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                 className="w-full max-w-lg"
                 padding="32px"
                 style={{ backgroundColor: 'rgba(0, 38, 118, 0.8)' }}
-                onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
                 <form id="join-form" onSubmit={handleSubmit} className="space-y-4">
                     <div>

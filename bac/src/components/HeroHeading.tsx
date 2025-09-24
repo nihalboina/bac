@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import ScrambleText from "./ScrambleText";
 import JoinModal from "./JoinModal";
 
@@ -47,18 +48,21 @@ export default function HeroHeading({
                 />
                 {/* Reserve logo width to avoid layout shift. Use inline size based on the final logo size. */}
                 <span
-                    className="inline-flex items-center justify-center align-middle"
+                    className="inline-flex items-center justify-center align-middle relative"
                     style={{ width: "2.5em", height: "1.1em" }}
                     aria-hidden
                 >
-                    <img
+                    <Image
                         src="/cal.svg"
                         alt=""
+                        fill
+                        sizes="2.5em"
                         onClick={() => setModalOpen(true)}
                         className={
-                            "h-[2em] w-auto transition-all duration-200 ease-out cursor-pointer hover:scale-110 " +
+                            "object-contain transition-all duration-200 ease-out cursor-pointer hover:scale-110 " +
                             (logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-90")
                         }
+                        priority
                     />
                 </span>
             </h1>
