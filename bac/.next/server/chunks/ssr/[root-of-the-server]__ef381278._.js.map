@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///Users/lilneezy/Desktop/Development/BAC/bac/src/app/page.tsx"],"sourcesContent":["export default function Home() {\n  return (\n    <main className=\"min-h-screen bg-black text-white flex items-center justify-center\">\n      <h1 className=\"font-sans text-4xl sm:text-6xl tracking-tight leading-none whitespace-nowrap flex items-center gap-3\">\n        <span className=\"font-bold\">BUILDERS AT</span>\n        <img src=\"/cal.svg\" alt=\"CAL\" className=\"h-[2em] w-auto align-middle\" />\n      </h1>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,sRAAC;QAAK,WAAU;kBACd,cAAA,sRAAC;YAAG,WAAU;;8BACZ,sRAAC;oBAAK,WAAU;8BAAY;;;;;;8BAC5B,sRAAC;oBAAI,KAAI;oBAAW,KAAI;oBAAM,WAAU;;;;;;;;;;;;;;;;;AAIhD","debugId":null}}]
+}
